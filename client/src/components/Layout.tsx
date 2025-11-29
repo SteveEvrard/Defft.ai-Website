@@ -22,20 +22,11 @@ export default function Layout({ children }: LayoutProps) {
   }, []);
 
   const navLinks = [
-    { name: "The Blind Spot", href: "#blind-spot" },
-    { name: "The Category", href: "#category" },
-    { name: "Symbiosis", href: "#symbiosis" },
-    { name: "The 4Es", href: "#rehumanize" },
-    { name: "The Flywheel", href: "#flywheel" },
+    { name: "Home", href: "/" },
+    { name: "The Philosophy", href: "/philosophy" },
+    { name: "The Engine", href: "/engine" },
+    { name: "The Strategy", href: "/strategy" },
   ];
-
-  const scrollToSection = (id: string) => {
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setMobileMenuOpen(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-accent-foreground overflow-x-hidden">
@@ -66,13 +57,16 @@ export default function Layout({ children }: LayoutProps) {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-all duration-300 uppercase tracking-wider hover:tracking-widest"
-              >
-                {link.name}
-              </button>
+              <Link key={link.name} href={link.href}>
+                <div
+                  className={cn(
+                    "text-sm font-medium transition-all duration-300 uppercase tracking-wider hover:tracking-widest cursor-pointer",
+                    location === link.href ? "text-primary font-bold" : "text-muted-foreground hover:text-primary"
+                  )}
+                >
+                  {link.name}
+                </div>
+              </Link>
             ))}
             <Button 
               variant="outline" 
@@ -96,13 +90,17 @@ export default function Layout({ children }: LayoutProps) {
         {mobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/10 p-6 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
             {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-lg font-medium text-left text-foreground hover:text-primary transition-colors"
-              >
-                {link.name}
-              </button>
+              <Link key={link.name} href={link.href}>
+                <div
+                  className={cn(
+                    "text-lg font-medium text-left transition-colors cursor-pointer",
+                    location === link.href ? "text-primary" : "text-foreground hover:text-primary"
+                  )}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </div>
+              </Link>
             ))}
           </div>
         )}

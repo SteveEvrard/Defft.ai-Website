@@ -1,9 +1,9 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Brain, Zap, Users, BarChart3, Layers, RefreshCw } from "lucide-react";
+import { ArrowRight, Brain, Users, Layers } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { Link } from "wouter";
 
 // Animation variants
 const fadeIn = {
@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 1. The Blind Spot */}
+      {/* 1. The Villain: Tribal Knowledge */}
       <section id="blind-spot" className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -91,18 +91,16 @@ export default function Home() {
               variants={fadeIn}
               className="space-y-6"
             >
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">The World Has a <span className="text-destructive">Blind Spot</span></h2>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">The Villain: <span className="text-destructive">Tribal Knowledge</span></h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Packaging distribution runs on tribal knowledge, inconsistent processes, and human memory. 
-                Reps sell what they remember. Customers buy what a rep recalls. Intelligence lives in notebooks, trunks, and inboxes — and disappears when a rep leaves.
+                Packaging distribution runs on a fragile, inefficient model: The tribal knowledge of veteran reps = the company brain.
+                When they retire or leave, that intelligence evaporates.
               </p>
               <div className="pl-6 border-l-4 border-destructive/50 italic text-xl text-foreground/90">
-                "Most organizations are drowning in data, but starving for understanding."
+                "New reps take 18–36 months to become competent. 70% of recommendations are suboptimal."
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Packaging distributors know less: Not why the customer buys. Not how the rep thinks. Not why opportunities are won, lost, or ignored.
-                <br /><br />
-                <strong className="text-white">This is the Phantom Knowledge Problem.</strong>
+                This is the <strong className="text-white">Phantom Expertise Problem™</strong> — the invisible leakage of intelligence that prevents distributors from scaling.
               </p>
             </motion.div>
             
@@ -181,176 +179,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Human-Machine Symbiosis */}
-      <section id="symbiosis" className="py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="order-2 md:order-1 relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
-            >
-              <img 
-                src="/assets/human-machine-symbiosis.png" 
-                alt="Human Machine Symbiosis" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-white font-heading text-2xl font-bold">"A human-in-the-loop is not a flaw — it is the feature."</p>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="order-1 md:order-2 space-y-8"
-            >
-              <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-heading font-bold text-white">The Human–Machine <span className="text-gradient">Symbiosis</span></motion.h2>
-              
-              <motion.div variants={fadeIn} className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
-                    <Zap className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">The MI Job</h4>
-                    <p className="text-muted-foreground">Reduce touches, compound intelligence, ensure no smart action is forgotten.</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0 border border-accent/20">
-                    <Users className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">The Human Job</h4>
-                    <p className="text-muted-foreground">Bring empathy, understand nuance, build trust, make the final judgment call.</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.p variants={fadeIn} className="text-lg text-muted-foreground border-l-2 border-white/10 pl-4">
-                Traditional CRMs try to replace the rep. <strong className="text-white">Defft.ai tries to augment them.</strong>
-              </motion.p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. The 4Es */}
-      <section id="rehumanize" className="py-24 bg-white/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">The Rehumanize Perspective</h2>
-            <p className="text-xl text-muted-foreground">
-              Everything Defft does is grounded in the 4Es model of human relationships.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Empathy", desc: "See the business through the customer's eyes. The buyer's constraints, motivations, and anxieties." },
-              { title: "Experiences", desc: "Every quote, every recommend, every email becomes a compounding moment where trust is built." },
-              { title: "Endorsement", desc: "Customers talk. Reps talk. Defft learns what influences decisions — socially, professionally, economically." },
-              { title: "Energy", desc: "Momentum inside a relationship: Who's engaged? Who's fading? Who's open to new products?" }
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-card border border-white/5 p-6 rounded-xl hover:bg-white/5 transition-colors duration-300"
-              >
-                <div className="text-4xl font-bold text-white/10 mb-4">0{i + 1}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. The Flywheel */}
-      <section id="flywheel" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/assets/flywheel-momentum.png" 
-            alt="Flywheel Background" 
-            className="w-full h-full object-cover opacity-40 mix-blend-screen"
-          />
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-        </div>
-
-        <div className="container relative z-10 px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">The Defft <span className="text-gradient">Flywheel</span></h2>
-              <p className="text-xl text-muted-foreground">
-                This is what creates the moat. The system gets smarter for every rep, forever.
-              </p>
-              
-              <div className="space-y-0 relative">
-                {/* Connecting Line */}
-                <div className="absolute left-[19px] top-4 bottom-4 w-0.5 bg-gradient-to-b from-primary via-accent to-transparent opacity-30" />
-                
-                {[
-                  { step: "1. Capture", desc: "Meeting prep, customer signals, product context" },
-                  { step: "2. Recommend", desc: "MI suggests actions, options, products, angles" },
-                  { step: "3. Act", desc: "Rep sends, shares, proposes, calls" },
-                  { step: "4. Learn", desc: "Defft captures behavior, outcomes, decisions" },
-                  { step: "5. Compound", desc: "The system gets smarter for every rep, forever" }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-6 relative group">
-                    <div className="w-10 h-10 rounded-full bg-background border border-white/20 flex items-center justify-center shrink-0 z-10 group-hover:border-primary group-hover:text-primary transition-colors">
-                      <RefreshCw className={cn("w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors", i === 4 && "animate-spin-slow")} />
-                    </div>
-                    <div className="pb-8">
-                      <h4 className="text-lg font-bold text-white group-hover:text-primary transition-colors">{item.step}</h4>
-                      <p className="text-muted-foreground">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative hidden md:block">
-              <div className="aspect-square rounded-full border border-white/10 flex items-center justify-center relative animate-spin-slow-reverse">
-                <div className="absolute inset-0 rounded-full border border-dashed border-white/20" />
-                <div className="w-2/3 h-2/3 rounded-full border border-primary/30 flex items-center justify-center relative animate-spin-slow">
-                  <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl" />
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-white mb-2">MOAT</div>
-                    <div className="text-sm text-muted-foreground uppercase tracking-widest">Compounding<br/>Intelligence</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-b from-background to-primary/10 border-t border-white/5">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
-            The System of Recommendation replaces guesswork with <span className="text-gradient">guidance</span>.
+            Ready to explore the <span className="text-gradient">Philosophy</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-12">
-            Join the Packaging Intelligence Summit and see the future of distribution.
+            Discover how Defft restores the human element to distribution.
           </p>
-          <Button 
-            size="lg" 
-            className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform"
-            onClick={() => window.open('#', '_blank')}
-          >
-            Get the Playbook <ArrowRight className="ml-2 w-6 h-6" />
-          </Button>
+          <Link href="/philosophy">
+            <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
+              The Philosophy <ArrowRight className="ml-2 w-6 h-6" />
+            </Button>
+          </Link>
         </div>
       </section>
     </Layout>
