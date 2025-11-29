@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 export default function Flywheel({ className = "" }: { className?: string }) {
   // Geometry Constants
   const center = 250;
-  const innerRadius = 180; // Inner edge of colored arrow
+  const innerRadius = 140; // Reduced inner radius for thicker arrows
   const outerRadius = 250; // Outer edge of colored arrow
-  const textRadius = 145;  // Radius for the text path
+  const textRadius = 195;  // Centered in the arrow thickness (140 + 250) / 2
   const arrowHeadAngle = 12; // Degrees for the arrow head
   const segmentSpan = 76; // Total degrees per segment (90 - gap)
   const gap = 14; // Gap between segments
@@ -73,78 +73,44 @@ export default function Flywheel({ className = "" }: { className?: string }) {
             <path id="textPathCircle" d={`M ${center}, ${center} m -${textRadius}, 0 a ${textRadius},${textRadius} 0 1,1 ${textRadius * 2},0 a ${textRadius},${textRadius} 0 1,1 -${textRadius * 2},0`} />
           </defs>
 
-          {/* Segments */}
-          {/* Top-Left (Outcomes) -> Top-Right (Insights) -> Bottom-Right (Better Data) -> Bottom-Left (AI Learning) */}
-          {/* 
-             Reference Image Orientation:
-             Top Arrow (Orange): Points Right. Starts Top-Left.
-             Right Arrow (Teal): Points Down. Starts Top-Right.
-             Bottom Arrow (Orange): Points Left. Starts Bottom-Right.
-             Left Arrow (Teal): Points Up. Starts Bottom-Left.
-          */}
+          {/* Segments - Rotated to align with quadrants */}
+          
+          {/* Top-Left (Outcomes) - Orange */}
+          {/* Center at 315 (-45). Start = -45 - 38 = -83 */}
+          <path d={createArrowPath(-83)} fill="url(#orangeGradient)" />
 
-          {/* Top Segment (Orange) - Starts at ~315 degrees (-45) */}
-          <path d={createArrowPath(-45 + gap/2)} fill="url(#orangeGradient)" />
+          {/* Top-Right (Insights) - Teal */}
+          {/* Center at 45. Start = 45 - 38 = 7 */}
+          <path d={createArrowPath(7)} fill="url(#tealGradient)" />
 
-          {/* Right Segment (Teal) - Starts at ~45 degrees */}
-          <path d={createArrowPath(45 + gap/2)} fill="url(#tealGradient)" />
+          {/* Bottom-Right (Better Data) - Orange */}
+          {/* Center at 135. Start = 135 - 38 = 97 */}
+          <path d={createArrowPath(97)} fill="url(#orangeGradient)" />
 
-          {/* Bottom Segment (Orange) - Starts at ~135 degrees */}
-          <path d={createArrowPath(135 + gap/2)} fill="url(#orangeGradient)" />
-
-          {/* Left Segment (Teal) - Starts at ~225 degrees */}
-          <path d={createArrowPath(225 + gap/2)} fill="url(#tealGradient)" />
+          {/* Bottom-Left (AI Learning) - Teal */}
+          {/* Center at 225. Start = 225 - 38 = 187 */}
+          <path d={createArrowPath(187)} fill="url(#tealGradient)" />
 
           {/* Text Labels */}
-          {/* 
-            Text needs to be centered in the quadrants.
-            Top-Left: OUTCOMES (Angle ~315)
-            Top-Right: INSIGHTS (Angle ~45)
-            Bottom-Right: BETTER DATA (Angle ~135)
-            Bottom-Left: AI LEARNING (Angle ~225)
-            
-            Path starts at 9 o'clock (270 deg? No, 'a' command logic).
-            M (center-r), center -> Leftmost point (9 o'clock).
-            0% = 9 o'clock.
-            
-            9 o'clock = 270 deg (in standard math) or 180 deg?
-            SVG coord system: 0 deg is 3 o'clock.
-            M 105 250 (left side).
-            Arc draws clockwise? 
-            If 0% is 9 o'clock:
-            Top-Left (315 deg) is 45 deg from 9 o'clock (270). 
-            Wait. 9 o'clock is 270. 12 o'clock is 0/360? No.
-            Clockwise from 9 o'clock:
-            9 -> 12 is 25%
-            12 -> 3 is 50%
-            3 -> 6 is 75%
-            6 -> 9 is 100%
-            
-            OUTCOMES (Top-Left, ~10:30): Between 9 and 12. ~12.5%
-            INSIGHTS (Top-Right, ~1:30): Between 12 and 3. ~37.5%
-            BETTER DATA (Bottom-Right, ~4:30): Between 3 and 6. ~62.5%
-            AI LEARNING (Bottom-Left, ~7:30): Between 6 and 9. ~87.5%
-          */}
-
-          <text fill="white" fontSize="22" fontWeight="800" letterSpacing="4" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
+          <text fill="white" fontSize="24" fontWeight="800" letterSpacing="2" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
             <textPath href="#textPathCircle" startOffset="12.5%" textAnchor="middle" >
               OUTCOMES
             </textPath>
           </text>
 
-          <text fill="white" fontSize="22" fontWeight="800" letterSpacing="4" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
+          <text fill="white" fontSize="24" fontWeight="800" letterSpacing="2" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
             <textPath href="#textPathCircle" startOffset="37.5%" textAnchor="middle" >
               INSIGHTS
             </textPath>
           </text>
 
-          <text fill="white" fontSize="22" fontWeight="800" letterSpacing="4" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
+          <text fill="white" fontSize="24" fontWeight="800" letterSpacing="2" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
             <textPath href="#textPathCircle" startOffset="62.5%" textAnchor="middle" >
               BETTER DATA
             </textPath>
           </text>
 
-          <text fill="white" fontSize="22" fontWeight="800" letterSpacing="4" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
+          <text fill="white" fontSize="24" fontWeight="800" letterSpacing="2" style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}>
             <textPath href="#textPathCircle" startOffset="87.5%" textAnchor="middle" >
               AI LEARNING
             </textPath>
@@ -156,7 +122,7 @@ export default function Flywheel({ className = "" }: { className?: string }) {
       {/* Center Logo Container */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[38%] h-[38%] bg-white rounded-full shadow-[0_0_60px_rgba(0,0,0,0.6)] flex items-center justify-center p-6 z-10 border-4 border-black/10">
-           <img src="/assets/Defftlogolock.png" alt="Defft Logo" className="w-full h-auto object-contain" />
+           <img src="/assets/logo.png" alt="Defft Logo" className="w-full h-auto object-contain" />
         </div>
       </div>
     </div>
