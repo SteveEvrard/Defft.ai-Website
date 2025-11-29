@@ -70,7 +70,7 @@ export default function Engine() {
               </motion.h2>
               <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-6">
                 A system cannot give better recommendations unless it understands packaging at a deeper level than any human.
-                So Defft built the industry’s first <strong>Packaging Knowledge Graph</strong>.
+                So Defft.ai built the industry’s first <strong>Packaging Knowledge Graph</strong>.
               </motion.p>
               <motion.ul variants={fadeIn} className="grid grid-cols-2 gap-4 mb-8">
                 {[
@@ -86,7 +86,7 @@ export default function Engine() {
               </motion.ul>
               <motion.div variants={fadeIn} className="p-4 bg-primary/10 border border-primary/20 rounded-lg">
                 <p className="text-primary font-medium italic">
-                  "The more Defft is used, the more irreplicable it becomes. That’s the moat."
+                  "The more Defft.ai is used, the more irreplicable it becomes. That’s the moat."
                 </p>
               </motion.div>
             </motion.div>
@@ -98,7 +98,7 @@ export default function Engine() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">The Wedge: Atomic Unit of Value</h2>
             <p className="text-lg text-muted-foreground">
-              Category kings start narrow. For Defft, the atomic wedge is <strong>The Rep Recommendation</strong>.
+              Category kings start narrow. For Defft.ai, the atomic wedge is <strong>The Rep Recommendation</strong>.
             </p>
           </div>
 
@@ -142,7 +142,7 @@ export default function Engine() {
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">The Defft <span className="text-gradient">Flywheel</span></h2>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">The Defft.ai <span className="text-gradient">Flywheel</span></h2>
               <p className="text-xl text-muted-foreground">
                 This is what creates the moat. The system gets smarter for every rep, forever.
               </p>
@@ -153,7 +153,7 @@ export default function Engine() {
                   { step: "1. Capture", desc: "Meeting prep, customer signals, product context" },
                   { step: "2. Recommend", desc: "MI suggests actions, options, products, angles" },
                   { step: "3. Act", desc: "Rep sends, shares, proposes, calls" },
-                  { step: "4. Learn", desc: "Defft captures behavior, outcomes, decisions" },
+                  { step: "4. Learn", desc: "Defft.ai captures behavior, outcomes, decisions" },
                   { step: "5. Compound", desc: "The system gets smarter for every rep, forever" }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6 relative group">

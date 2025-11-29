@@ -141,7 +141,7 @@ export default function Strategy() {
         {/* Why Defft Wins */}
         <section className="mb-24 bg-white/5 rounded-3xl p-8 md:p-16">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Why Defft Wins</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Why Defft.ai Wins</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

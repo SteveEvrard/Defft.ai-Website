@@ -44,7 +44,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="inline-block">
               <span className="px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium tracking-wider uppercase backdrop-blur-sm">
-                Category Design Document v2.0
+                Category Design Document
               </span>
             </motion.div>
             
@@ -56,7 +56,7 @@ export default function Home() {
             <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               The MI-powered human-centered OS for packaging distributors.
               <br />
-              <span className="text-foreground font-medium">ERP tells you what happened. CRM tells you what you did. Defft tells you what to do next.</span>
+              <span className="text-foreground font-medium">ERP tells you what happened. CRM tells you what you did. Defft.ai tells you what to do next.</span>
             </motion.p>
             
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
@@ -161,7 +161,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Card 3: Defft */}
+            {/* Card 3: Defft.ai */}
             <Card className="bg-gradient-to-b from-card to-primary/5 border-primary/30 shadow-[0_0_30px_-10px_var(--primary)] relative overflow-hidden group transform md:-translate-y-4">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent" />
               <CardContent className="p-8 space-y-4 relative z-10">
@@ -187,7 +187,7 @@ export default function Home() {
             The <span className="text-gradient">Philosophy</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-12">
-            Discover how Defft restores the human element to distribution through the 4Es and Symbiosis.
+            Discover how Defft.ai restores the human element to distribution through the 4Es and Symbiosis.
           </p>
           <Link href="/philosophy">
             <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
