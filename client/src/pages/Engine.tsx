@@ -108,7 +108,7 @@ export default function Engine() {
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Target className="w-32 h-32" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">The 30-Second Interaction</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">The 60-Second Interaction</h3>
               <p className="text-muted-foreground mb-6">
                 A single moment where the system suggests the best box, material, vendor, price, and sustainability trade-off.
               </p>
@@ -170,7 +170,7 @@ export default function Engine() {
               </div>
             </div>
 
-            <div className="relative hidden md:flex items-center justify-center">
+            <div className="relative flex items-center justify-center">
               <Flywheel className="w-[400px] h-[400px]" />
             </div>
           </div>
