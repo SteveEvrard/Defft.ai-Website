@@ -77,7 +77,7 @@ export default function Layout({ children }: LayoutProps) {
             <Button 
               variant="outline" 
               className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => window.open('/Defft_Category_Design_Report.pdf', '_blank')}
             >
               Read the Report
             </Button>
