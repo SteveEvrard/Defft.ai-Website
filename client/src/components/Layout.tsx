@@ -21,11 +21,17 @@ export default function Layout({ children }: LayoutProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "The Philosophy", href: "/philosophy" },
     { name: "The Engine", href: "/engine" },
     { name: "The Strategy", href: "/strategy" },
+    { name: "The POV", href: "/pov" },
   ];
 
   return (

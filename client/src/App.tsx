@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Philosophy from "./pages/Philosophy";
 import Engine from "./pages/Engine";
 import Strategy from "./pages/Strategy";
+import POV from "./pages/POV";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/philosophy" component={Philosophy} />
       <Route path="/engine" component={Engine} />
       <Route path="/strategy" component={Strategy} />
+      <Route path="/pov" component={POV} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Database, Target, RefreshCw, Network, Box, Layers } from "lucide-react";
+import { Database, Target, RefreshCw, Network, Box, Layers, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const fadeIn = {
@@ -174,6 +176,24 @@ export default function Engine() {
                 className="w-full h-auto object-contain opacity-80 mix-blend-screen animate-pulse-slow"
               />
             </div>
+          </div>
+        </section>
+
+        {/* Next Chapter Section */}
+        <section className="py-12 border-t border-white/5 mt-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Next Chapter</p>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-8">
+              The <span className="text-gradient">Strategy</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12">
+              See the roadmap to becoming the Category King: The From-To Shift and Lightning Strike Plan.
+            </p>
+            <Link href="/strategy">
+              <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
+                Continue Reading <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+            </Link>
           </div>
         </section>
       </div>

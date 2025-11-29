@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Zap, Users, Heart, Sparkles, MessageCircle, Activity } from "lucide-react";
+import { Zap, Users, Heart, Sparkles, MessageCircle, Activity, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -153,6 +155,24 @@ export default function Philosophy() {
                 className="relative z-10 rounded-2xl shadow-2xl border border-white/10 w-full max-w-md transform hover:scale-105 transition-transform duration-700"
               />
             </div>
+          </div>
+        </section>
+
+        {/* Next Chapter Section */}
+        <section className="py-12 border-t border-white/5 mt-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Next Chapter</p>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-8">
+              The <span className="text-gradient">Engine</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12">
+              Explore the core mechanics: The Knowledge Graph, The Wedge, and The Flywheel.
+            </p>
+            <Link href="/engine">
+              <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
+                Continue Reading <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+            </Link>
           </div>
         </section>
       </div>

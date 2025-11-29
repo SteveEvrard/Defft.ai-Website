@@ -2,6 +2,8 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Flag, Trophy, Zap, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -158,6 +160,24 @@ export default function Strategy() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </section>
+
+        {/* Next Chapter Section */}
+        <section className="py-12 border-t border-white/5 mt-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Next Chapter</p>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-8">
+              The <span className="text-gradient">POV</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12">
+              The culmination: Our Mantra, Mission, Core Values, and Vision.
+            </p>
+            <Link href="/pov">
+              <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
+                Read the Culmination <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+            </Link>
           </div>
         </section>
       </div>

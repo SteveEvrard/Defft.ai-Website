@@ -179,18 +179,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Next Chapter Section */}
       <section className="py-24 bg-gradient-to-b from-background to-primary/10 border-t border-white/5">
         <div className="container mx-auto px-4 text-center max-w-4xl">
+          <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Next Chapter</p>
           <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
-            Ready to explore the <span className="text-gradient">Philosophy</span>?
+            The <span className="text-gradient">Philosophy</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-12">
-            Discover how Defft restores the human element to distribution.
+            Discover how Defft restores the human element to distribution through the 4Es and Symbiosis.
           </p>
           <Link href="/philosophy">
             <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
-              The Philosophy <ArrowRight className="ml-2 w-6 h-6" />
+              Continue Reading <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
           </Link>
         </div>
