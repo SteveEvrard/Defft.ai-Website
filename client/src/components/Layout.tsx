@@ -69,7 +69,7 @@ export default function Layout({ children }: LayoutProps) {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-all duration-300 uppercase tracking-wider hover:tracking-widest"
               >
                 {link.name}
               </button>
@@ -77,6 +77,7 @@ export default function Layout({ children }: LayoutProps) {
             <Button 
               variant="outline" 
               className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              onClick={() => window.open('#', '_blank')}
             >
               Read the Report
             </Button>

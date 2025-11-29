@@ -60,10 +60,19 @@ export default function Home() {
             </motion.p>
             
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_var(--primary)] transition-all duration-300 hover:scale-105">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_var(--primary)] transition-all duration-300 hover:scale-105"
+                onClick={() => document.getElementById('category')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Explore the System
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-6 border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
+                onClick={() => window.open('#', '_blank')}
+              >
                 Download PDF
               </Button>
             </motion.div>
@@ -335,7 +344,11 @@ export default function Home() {
           <p className="text-xl text-muted-foreground mb-12">
             Join the Packaging Intelligence Summit and see the future of distribution.
           </p>
-          <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
+          <Button 
+            size="lg" 
+            className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform"
+            onClick={() => window.open('#', '_blank')}
+          >
             Get the Playbook <ArrowRight className="ml-2 w-6 h-6" />
           </Button>
         </div>
