@@ -44,6 +44,26 @@ export default function POV() {
           </motion.p>
         </motion.div>
 
+        {/* Point of View Statement */}
+        <section className="mb-32 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 blur-3xl -z-10" />
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="bg-card/30 backdrop-blur-md border border-white/10 rounded-3xl p-12 md:p-20 text-center max-w-5xl mx-auto shadow-2xl"
+          >
+            <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-8">The Point of View</h2>
+            <p className="text-3xl md:text-5xl font-heading font-bold text-white leading-tight mb-8">
+              "The future of distribution isn't about better logistics. It's about <span className="text-gradient">better decisions</span>."
+            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              We believe that in a world drowning in data, the ultimate competitive advantage is the ability to turn noise into a clear, actionable recommendation. We are not just building software; we are building the intelligence layer that makes every human rep 10x more valuable.
+            </p>
+          </motion.div>
+        </section>
+
         {/* Mantra & Mission */}
         <section className="mb-32 grid md:grid-cols-2 gap-12">
           <motion.div 
