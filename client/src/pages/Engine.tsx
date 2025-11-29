@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Database, Target, RefreshCw, Network, Box, Layers, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import Flywheel from "@/components/Flywheel";
 import { cn } from "@/lib/utils";
 
 const fadeIn = {
@@ -169,12 +170,8 @@ export default function Engine() {
               </div>
             </div>
 
-            <div className="relative hidden md:block">
-              <img 
-                src="/assets/Defft.aiflywheel.png" 
-                alt="Defft.ai Flywheel" 
-                className="w-full h-auto object-contain animate-spin-slow"
-              />
+            <div className="relative hidden md:flex items-center justify-center">
+              <Flywheel className="w-[400px] h-[400px]" />
             </div>
           </div>
         </section>
