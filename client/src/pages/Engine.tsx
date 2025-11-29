@@ -171,9 +171,9 @@ export default function Engine() {
 
             <div className="relative hidden md:block">
               <img 
-                src="/assets/flywheel-momentum.png" 
-                alt="Flywheel" 
-                className="w-full h-auto object-contain opacity-80 mix-blend-screen animate-pulse-slow"
+                src="/assets/Defft.aiflywheel.png" 
+                alt="Defft.ai Flywheel" 
+                className="w-full h-auto object-contain animate-spin-slow"
               />
             </div>
           </div>
