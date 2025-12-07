@@ -30,6 +30,9 @@ export default function Layout({ children }: LayoutProps) {
     { name: "Home", href: "/" },
     { name: "The Philosophy", href: "/philosophy" },
     { name: "The Engine", href: "/engine" },
+    { name: "Manifesto", href: "/manifesto" },
+    { name: "Category", href: "/category" },
+    { name: "Roadmap", href: "/roadmap" },
     { name: "The Strategy", href: "/strategy" },
     { name: "The POV", href: "/pov" },
   ];
