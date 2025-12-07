@@ -10,6 +10,7 @@ import Engine from "@/pages/Engine";
 import Manifesto from "@/pages/Manifesto";
 import Category from "@/pages/Category";
 import Roadmap from "@/pages/Roadmap";
+import Team from "@/pages/Team";
 import Strategy from "./pages/Strategy";
 import POV from "./pages/POV";
 
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/manifesto" component={Manifesto} />
       <Route path="/category" component={Category} />
       <Route path="/roadmap" component={Roadmap} />
+      <Route path="/team" component={Team} />
       <Route path="/strategy" component={Strategy} />
       <Route path="/pov" component={POV} />
       <Route path="/404" component={NotFound} />

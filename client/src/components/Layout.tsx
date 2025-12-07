@@ -33,6 +33,7 @@ export default function Layout({ children }: LayoutProps) {
     { name: "Manifesto", href: "/manifesto" },
     { name: "Category", href: "/category" },
     { name: "Roadmap", href: "/roadmap" },
+    { name: "Team", href: "/team" },
     { name: "The Strategy", href: "/strategy" },
     { name: "The POV", href: "/pov" },
   ];
