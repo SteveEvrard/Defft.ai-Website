@@ -53,7 +53,7 @@ export default function Layout({ children }: LayoutProps) {
           scrolled ? "bg-background/80 backdrop-blur-md border-white/10 py-4" : "bg-transparent py-6"
         )}
       >
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer group">
               <img 
@@ -65,7 +65,7 @@ export default function Layout({ children }: LayoutProps) {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
                 <div
