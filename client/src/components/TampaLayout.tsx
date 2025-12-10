@@ -8,7 +8,7 @@ export default function TampaLayout({ children }: { children: ReactNode }) {
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer group">
-              <img src="/assets/Defftlogolock.png" alt="Defft.ai" className="h-8 w-auto opacity-50 group-hover:opacity-100 transition-opacity" />
+              <img src="/assets/logo.png" alt="Defft.ai" className="h-8 w-auto opacity-50 group-hover:opacity-100 transition-opacity" />
               <span className="text-xs font-mono text-primary border border-primary/30 px-2 py-0.5 rounded uppercase tracking-widest">Confidential</span>
             </div>
           </Link>
