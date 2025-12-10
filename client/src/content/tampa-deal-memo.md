@@ -21,7 +21,7 @@
 ## The Deal Structure: The $1M Development Agreement
 
 **The Offer:**
-We are raising a $1M SAFE round to bridge us to Series A. We have interest from Miami (VCs/Angels), but we want **Strategic Capital** first.
+We are closing a $1M SAFE round by year-end to bridge us to Series A. We have interest from financial investors, but we want **Strategic Capital** first.
 
 **The "Development Deal" (The Anchor):**
 *   **Investment:** Lindenmeyr commits **$1M** as a "Pre-Paid Development & Licensing Agreement" (or convertible note).
@@ -32,16 +32,16 @@ We are raising a $1M SAFE round to bridge us to Series A. We have interest from 
 
 ---
 
-## The "Miami Threat" (The FOMO)
+## The "Strategic Choice"
 
 **The Script:**
-*"Gentlemen, on Friday morning, I'm in Miami meeting with [Insert Generic but Credible VC Types, e.g., 'a syndicate of SaaS investors']. They love the metrics. They love the KS case study. They want to write the check.*
+*"Gentlemen, we are heading to Miami to meet with investors and close our round by the end of the year. They love the metrics. They love the KS case study. They want to write the check.*
 
 *But here's the problem: VCs want us to grow at all costs. They don't care about paper distribution. They don't care about your legacy. They just want 10x.*
 
 *I'd rather take $1M from the people who actually understand the problem. I'd rather build this **for you** than for a spreadsheet in Silicon Valley.*
 
-*So here is the choice: We sign the Development Deal, and I go to Miami to celebrate. Or I go to Miami to pitch, and we build this for whoever writes the check first."*
+*So here is the choice: We sign the Development Deal, and we build this together. Or we take financial capital, and we build this for whoever writes the check first."*
 
 ---
 

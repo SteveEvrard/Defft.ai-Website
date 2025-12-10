@@ -121,7 +121,7 @@ export default function Tampa() {
           <div className="bg-gradient-to-br from-white/10 to-black border border-white/20 rounded-3xl p-10 max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl font-bold text-white mb-6">The Proposal</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              We are heading to Miami on Friday to close our $1M SAFE round. We want "Smart Capital" first.
+              We are closing our $1M SAFE round by year-end. We have interest from financial investors, but we want "Smart Capital" first.
             </p>
             <div className="flex flex-col gap-4 text-left">
               <div className="flex items-center gap-4">
