@@ -102,6 +102,43 @@ export default function Tampa() {
           variants={fadeIn}
           className="text-center"
         >
+          <h2 className="text-3xl font-bold text-white mb-8">The Choice: Lab vs. Scale</h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-20 text-left max-w-4xl mx-auto">
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+              <h3 className="text-2xl font-bold text-muted-foreground mb-4">Kelly Spicers was the Lab.</h3>
+              <p className="text-lg text-muted-foreground">
+                We needed a controlled environment to prove the hypothesis. We broke things. We fixed them. We proved the "60-Second Interaction" works. The experiment is over.
+              </p>
+            </div>
+            <div className="bg-primary/10 p-8 rounded-2xl border border-primary/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Lindenmeyr is the Scale.</h3>
+              <p className="text-lg text-white">
+                You don't test a Ferrari engine in a semi-truck. Now that the engine is built, we need a chassis big enough to handle the horsepower. That's you.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-white/10 to-black border border-white/20 rounded-3xl p-10 max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl font-bold text-white mb-6">The Proposal</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              We are heading to Miami on Friday to close our $1M SAFE round. We want "Smart Capital" first.
+            </p>
+            <div className="flex flex-col gap-4 text-left">
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-black">1</div>
+                <p className="text-white text-lg"><strong>$1M Development Deal:</strong> Pre-pay for exclusivity and influence.</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-black">2</div>
+                <p className="text-white text-lg"><strong>First Right of Refusal:</strong> Lock in the "Enterprise Edition" for the East Coast.</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-black">3</div>
+                <p className="text-white text-lg"><strong>Executive Sidecar:</strong> Personal allocation for the leaders in this room.</p>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-3xl font-bold text-white mb-8">Ready for Dessert?</h2>
           <Link href="/roadmap">
             <Button size="lg" className="text-xl px-10 py-8 bg-white text-black hover:bg-gray-200 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
