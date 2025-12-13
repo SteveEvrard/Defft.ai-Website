@@ -119,6 +119,24 @@ export default function Home() {
               />
             </motion.div>
           </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
+            <div className="bg-card/50 p-6 rounded-xl border border-border/50 backdrop-blur-sm">
+              <img src="/assets/tampa-human-hero.png" alt="Empowered Rep" className="w-full h-48 object-cover rounded-lg mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-2">Empowered Reps</h3>
+              <p className="text-muted-foreground">Armed with intelligence, not just data.</p>
+            </div>
+            <div className="bg-card/50 p-6 rounded-xl border border-border/50 backdrop-blur-sm">
+              <img src="/assets/tampa-human-success.png" alt="Successful Deal" className="w-full h-48 object-cover rounded-lg mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-2">Trusted Partners</h3>
+              <p className="text-muted-foreground">Building relationships that last decades.</p>
+            </div>
+            <div className="bg-card/50 p-6 rounded-xl border border-border/50 backdrop-blur-sm">
+              <img src="/assets/tampa-human-team.png" alt="Winning Team" className="w-full h-48 object-cover rounded-lg mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-2">Winning Culture</h3>
+              <p className="text-muted-foreground">Where talent meets technology.</p>
+            </div>
+          </div>
         </div>
       </section>
 
