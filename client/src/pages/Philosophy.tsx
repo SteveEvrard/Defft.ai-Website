@@ -63,6 +63,13 @@ export default function Philosophy() {
                 The industry describes humans as "targets," "accounts," and "SKUs." This language strips away the human. 
                 Defft.ai restores it through measurable, operational empathy.
               </p>
+              <div className="mt-8 rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+                <img 
+                  src="/assets/philosophy-empathy.png" 
+                  alt="Empathy in Action" 
+                  className="w-full h-auto hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
@@ -159,13 +166,22 @@ export default function Philosophy() {
               </motion.div>
             </motion.div>
 
-            <div className="relative flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 blur-[100px] rounded-full opacity-50" />
-              <img 
-                src="/assets/human-machine-symbiosis.png" 
-                alt="Symbiosis" 
-                className="relative z-10 rounded-2xl shadow-2xl border border-white/10 w-full max-w-md transform hover:scale-105 transition-transform duration-700"
-              />
+            <div className="space-y-8">
+              <div className="relative flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 blur-[100px] rounded-full opacity-50" />
+                <img 
+                  src="/assets/philosophy-empowerment.png" 
+                  alt="Empowered by Intelligence" 
+                  className="relative z-10 rounded-2xl shadow-2xl border border-white/10 w-full transform hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="relative flex items-center justify-center">
+                <img 
+                  src="/assets/philosophy-creativity.png" 
+                  alt="Creative Collaboration" 
+                  className="relative z-10 rounded-2xl shadow-2xl border border-white/10 w-full transform hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             </div>
           </div>
         </section>
