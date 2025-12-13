@@ -22,20 +22,32 @@ const staggerContainer = {
 export default function Philosophy() {
   return (
     <Layout>
-      <div className="pt-24 pb-12 container mx-auto px-4">
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-          className="max-w-4xl mx-auto text-center mb-20"
-        >
-          <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-heading font-bold mb-6">
-            The <span className="text-gradient">Rehumanize</span> Layer
-          </motion.h1>
-          <motion.p variants={fadeIn} className="text-xl text-muted-foreground">
-            Every packaging decision affects a real person. Defft.ai restores the human element to distribution.
-          </motion.p>
-        </motion.div>
+      <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden mb-20">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/assets/hero-human-connection.png" 
+            alt="Human Connection" 
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        </div>
+        <div className="container relative z-10 px-4 text-center">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="max-w-4xl mx-auto"
+          >
+            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-heading font-bold mb-6 text-white">
+              The <span className="text-gradient">Rehumanize</span> Layer
+            </motion.h1>
+            <motion.p variants={fadeIn} className="text-xl text-gray-200 font-medium">
+              Every packaging decision affects a real person. Defft.ai restores the human element to distribution.
+            </motion.p>
+          </motion.div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4">
 
         {/* The 4Es Framework */}
         <section className="mb-32">

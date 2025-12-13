@@ -22,27 +22,39 @@ const staggerContainer = {
 export default function POV() {
   return (
     <Layout>
-      <div className="pt-24 pb-12 container mx-auto px-4">
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-          className="max-w-4xl mx-auto text-center mb-20"
-        >
-          <motion.div variants={fadeIn} className="inline-block mb-6">
-            <span className="px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium tracking-wider uppercase backdrop-blur-sm">
-              The Culmination
-            </span>
+      <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden mb-20">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/assets/hero-human-insight.png" 
+            alt="Point of View" 
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        </div>
+        <div className="container relative z-10 px-4 text-center">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="max-w-4xl mx-auto"
+          >
+            <motion.div variants={fadeIn} className="inline-block mb-6">
+              <span className="px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium tracking-wider uppercase backdrop-blur-sm">
+                The Culmination
+              </span>
+            </motion.div>
+            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-heading font-bold mb-8 text-white">
+              Our <span className="text-gradient">Point of View</span>
+            </motion.h1>
+            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
+              What’s true in life should be true in distribution.
+              <br />
+              <span className="text-white font-bold">We believe packaging must move from opinion-based to intelligence-based.</span>
+            </motion.p>
           </motion.div>
-          <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-heading font-bold mb-8">
-            Our <span className="text-gradient">Point of View</span>
-          </motion.h1>
-          <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            What’s true in life should be true in distribution.
-            <br />
-            <span className="text-white font-medium">We believe packaging must move from opinion-based to intelligence-based.</span>
-          </motion.p>
-        </motion.div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4">
 
         {/* Point of View Statement */}
         <section className="mb-32 relative">

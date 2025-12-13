@@ -28,7 +28,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/assets/hero-fluid-intelligence.png" 
+            src="/assets/hero-human-future.png" 
             alt="Fluid Intelligence Background" 
             className="w-full h-full object-cover opacity-60"
           />
