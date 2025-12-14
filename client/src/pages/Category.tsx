@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Check } from "lucide-react";
 import { Link } from "wouter";
 import DataOverlay from "@/components/DataOverlay";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -61,88 +62,108 @@ export default function Category() {
           <img src="/assets/category-wedge.png" alt="The Wedge Visualization" className="w-full h-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-16 mb-32">
+        <div className="mb-32">
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={staggerContainer}
+            variants={fadeIn}
+            className="mb-16"
           >
-            <motion.h2 variants={fadeIn} className="text-3xl font-bold text-white mb-6">The Problem: The Guesswork Tax</motion.h2>
-            <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-8">
-              Most distributors run on ERP (what happened) and CRM (who we know). But neither tells a rep <strong>what to sell right now</strong>.
-            </motion.p>
-            <motion.ul variants={fadeIn} className="space-y-6">
-              <li className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center shrink-0 text-destructive">
-                  <X className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold">Tribal Knowledge is a Liability</h4>
-                  <p className="text-sm text-muted-foreground">When your best rep leaves, their brain leaves. That's a single point of failure.</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center shrink-0 text-destructive">
-                  <X className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold">The Search Tax</h4>
-                  <p className="text-sm text-muted-foreground">Reps spend 40% of their week searching for specs, pricing, and vendors. That's 16 hours of lost revenue.</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center shrink-0 text-destructive">
-                  <X className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold">Reactive Selling</h4>
-                  <p className="text-sm text-muted-foreground">You wait for the phone to ring. You quote what they asked for, not what they need.</p>
-                </div>
-              </li>
-            </motion.ul>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Visceral Shift: From Chaos to Clarity</h2>
+            <div className="max-w-5xl mx-auto">
+              <BeforeAfterSlider 
+                beforeImage="/assets/category-chaos.png"
+                afterImage="/assets/category-clarity.png"
+                beforeLabel="The Guesswork Tax (Chaos)"
+                afterLabel="System of Recommendation (Clarity)"
+              />
+            </div>
           </motion.div>
 
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.h2 variants={fadeIn} className="text-3xl font-bold text-white mb-6">The Solution: Compounding Intelligence</motion.h2>
-            <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-8">
-              A System of Recommendation doesn't just store data; it <strong>thinks</strong>. It generates the <strong>60-Second Interaction</strong>.
-            </motion.p>
-            <motion.ul variants={fadeIn} className="space-y-6">
-              <li className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 text-primary">
-                  <Check className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold">Institutional Intelligence</h4>
-                  <p className="text-sm text-muted-foreground">The system gets smarter with every interaction, forever.</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 text-primary">
-                  <Check className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold">Instant Answers</h4>
-                  <p className="text-sm text-muted-foreground">From 4 hours of searching to 60 seconds of knowing.</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 text-primary">
-                  <Check className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold">Proactive Selling</h4>
-                  <p className="text-sm text-muted-foreground">Pitch before they ask. Capture margin before it's bid out.</p>
-                </div>
-              </li>
-            </motion.ul>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-16">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
+              <motion.h2 variants={fadeIn} className="text-3xl font-bold text-white mb-6">The Problem: The Guesswork Tax</motion.h2>
+              <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-8">
+                Most distributors run on ERP (what happened) and CRM (who we know). But neither tells a rep <strong>what to sell right now</strong>.
+              </motion.p>
+              <motion.ul variants={fadeIn} className="space-y-6">
+                <li className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center shrink-0 text-destructive">
+                    <X className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">Tribal Knowledge is a Liability</h4>
+                    <p className="text-sm text-muted-foreground">When your best rep leaves, their brain leaves. That's a single point of failure.</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center shrink-0 text-destructive">
+                    <X className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">The Search Tax</h4>
+                    <p className="text-sm text-muted-foreground">Reps spend 40% of their week searching for specs, pricing, and vendors. That's 16 hours of lost revenue.</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center shrink-0 text-destructive">
+                    <X className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">Reactive Selling</h4>
+                    <p className="text-sm text-muted-foreground">You wait for the phone to ring. You quote what they asked for, not what they need.</p>
+                  </div>
+                </li>
+              </motion.ul>
+            </motion.div>
+
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
+              <motion.h2 variants={fadeIn} className="text-3xl font-bold text-white mb-6">The Solution: Compounding Intelligence</motion.h2>
+              <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-8">
+                A System of Recommendation doesn't just store data; it <strong>thinks</strong>. It generates the <strong>60-Second Interaction</strong>.
+              </motion.p>
+              <motion.ul variants={fadeIn} className="space-y-6">
+                <li className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 text-primary">
+                    <Check className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">Institutional Intelligence</h4>
+                    <p className="text-sm text-muted-foreground">The system gets smarter with every interaction, forever.</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 text-primary">
+                    <Check className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">Instant Answers</h4>
+                    <p className="text-sm text-muted-foreground">From 4 hours of searching to 60 seconds of knowing.</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 text-primary">
+                    <Check className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">Proactive Selling</h4>
+                    <p className="text-sm text-muted-foreground">Pitch before they ask. Capture margin before it's bid out.</p>
+                  </div>
+                </li>
+              </motion.ul>
+            </motion.div>
+          </div>
         </div>
 
         <motion.div 
