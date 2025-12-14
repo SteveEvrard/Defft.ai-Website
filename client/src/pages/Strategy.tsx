@@ -69,6 +69,7 @@ export default function Strategy() {
             </div>
 
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-8 relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('/assets/strategy-human-chess.png')] opacity-20 bg-cover mix-blend-overlay" />
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] rounded-full" />
               <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest flex items-center gap-2">
                 New Game <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded">System of Recommendation™</span>

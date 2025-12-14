@@ -97,9 +97,10 @@ export default function Roadmap() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="mb-20 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+          className="mb-20 rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative"
         >
-          <img src="/assets/roadmap-future.png" alt="Future Roadmap Visualization" className="w-full h-auto" />
+          <div className="absolute inset-0 bg-[url('/assets/roadmap-human-journey.png')] opacity-40 bg-cover mix-blend-overlay" />
+          <img src="/assets/roadmap-future.png" alt="Future Roadmap Visualization" className="w-full h-auto relative z-10" />
         </motion.div>
 
         <div className="max-w-5xl mx-auto relative">

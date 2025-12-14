@@ -50,7 +50,7 @@ export default function Engine() {
               className="order-2 md:order-1"
             >
               <div className="relative aspect-square rounded-full border border-white/10 flex items-center justify-center bg-white/5 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/assets/hero-fluid-intelligence.png')] opacity-30 bg-cover animate-spin-slow-reverse" />
+                <div className="absolute inset-0 bg-[url('/assets/engine-human-brain.png')] opacity-50 bg-cover" />
                 <div className="relative z-10 text-center p-8 bg-background/80 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl">
                   <Network className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">The Brain of Packaging™</h3>

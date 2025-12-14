@@ -25,7 +25,7 @@ export default function Category() {
       <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden mb-20">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/assets/hero-human-collab.png" 
+            src="/assets/category-human-leader.png" 
             alt="Collaborative Category" 
             className="w-full h-full object-cover opacity-40"
           />
