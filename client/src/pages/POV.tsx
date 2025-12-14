@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Lightbulb, Compass, Heart, Zap, ArrowRight } from "lucide-react";
+import { Lightbulb, Compass, Heart, Zap, ArrowRight, Users } from "lucide-react";
 import { Link } from "wouter";
 import DataOverlay from "@/components/DataOverlay";
 import { Button } from "@/components/ui/button";
@@ -179,7 +179,7 @@ export default function POV() {
               <Button 
                 size="lg" 
                 className="text-lg px-10 py-8 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_var(--primary)] rounded-full"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.location.href = 'mailto:hello@defft.ai'}
               >
                 Join the Revolution
               </Button>
@@ -191,4 +191,4 @@ export default function POV() {
   );
 }
 
-import { Users } from "lucide-react";
+

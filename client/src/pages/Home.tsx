@@ -73,7 +73,7 @@ export default function Home() {
                 size="lg" 
                 variant="outline" 
                 className="text-lg px-8 py-6 border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
-                onClick={() => window.open('/Defft_Category_Design_Report.pdf', '_blank')}
+                onClick={() => window.open('/assets/Defft_Category_Design_Report.pdf', '_blank')}
               >
                 Download PDF
               </Button>
