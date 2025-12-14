@@ -134,6 +134,7 @@ export default function Team() {
           <div className="absolute inset-0 opacity-30 pointer-events-none mix-blend-overlay">
             <img src="/assets/team-origin.png" alt="Origin Story Background" className="w-full h-full object-cover blur-sm scale-110" />
           </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/60 to-background/90" />
           
           <div className="relative z-10 max-w-4xl mx-auto">
             <Quote className="w-16 h-16 text-primary mx-auto mb-10 opacity-80" />

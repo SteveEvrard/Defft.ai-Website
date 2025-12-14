@@ -108,9 +108,21 @@ export default function Manifesto() {
           variants={staggerContainer}
           className="max-w-3xl mx-auto space-y-12 text-lg md:text-xl leading-relaxed text-muted-foreground"
         >
-          <motion.p variants={fadeIn}>
-            We believe packaging distribution is broken. Not because the people are broken, but because the system they are forced to use is broken.
-          </motion.p>
+          <motion.div variants={fadeIn} className="grid md:grid-cols-2 gap-8 items-center mb-8">
+            <p>
+              We believe packaging distribution is broken. Not because the people are broken, but because the system they are forced to use is broken.
+            </p>
+            <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg relative group">
+              <img 
+                src="/assets/manifesto-broken-system.png" 
+                alt="The Broken System" 
+                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <span className="text-xs font-bold text-destructive uppercase tracking-widest">The Old Way</span>
+              </div>
+            </div>
+          </motion.div>
           <motion.p variants={fadeIn}>
             We believe the future of this industry lies not in warehouses, trucks, or catalogs, but in <strong className="text-white">intelligence</strong>.
           </motion.p>

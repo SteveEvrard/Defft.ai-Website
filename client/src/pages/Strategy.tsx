@@ -68,13 +68,22 @@ export default function Strategy() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-8 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('/assets/strategy-human-chess.png')] opacity-20 bg-cover mix-blend-overlay" />
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] rounded-full" />
-              <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest flex items-center gap-2">
-                New Game <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded">System of Recommendation™</span>
-              </h3>
-              <ul className="space-y-6">
+            <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-0 relative overflow-hidden group">
+              <div className="absolute inset-0">
+                <img 
+                  src="/assets/strategy-winning.png" 
+                  alt="Winning Together" 
+                  className="w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-primary/10" />
+              </div>
+              <div className="relative z-10 p-8">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] rounded-full" />
+                <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest flex items-center gap-2">
+                  New Game <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded">System of Recommendation™</span>
+                </h3>
+              </div>
+              <ul className="space-y-6 relative z-10 px-8 pb-8">
                 {[
                   "Reps get machine-backed reasoning",
                   "Intelligence lives in a compounding knowledge graph",

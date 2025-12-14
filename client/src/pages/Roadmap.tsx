@@ -113,6 +113,25 @@ export default function Roadmap() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            variants={fadeIn}
+            className="mb-24 rounded-2xl overflow-hidden border border-white/10 shadow-lg relative group"
+          >
+            <img 
+              src="/assets/roadmap-deployment.png" 
+              alt="Deployment Phase" 
+              className="w-full h-[300px] object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 p-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Phase 1: Deployment</h3>
+              <p className="text-muted-foreground">Boots on the ground. Real people, real training.</p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={staggerContainer}
             className="space-y-12 md:space-y-24"
           >

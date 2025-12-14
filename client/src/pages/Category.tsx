@@ -161,12 +161,23 @@ export default function Category() {
               <p className="text-muted-foreground">Manual Search: 4 hours/day</p>
               <p className="text-muted-foreground">Flat Data: Rows and columns</p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 relative">
               <h3 className="text-xl font-bold text-primary border-b border-primary/30 pb-4">New Way (System of Recommendation)</h3>
               <p className="text-white font-medium">Proactive: Pitch before they ask</p>
               <p className="text-white font-medium">Institutional Intelligence: In the system</p>
               <p className="text-white font-medium">Instant Answers: 60 seconds</p>
               <p className="text-white font-medium">Knowledge Graph: Relationships and context</p>
+              
+              <div className="mt-8 rounded-xl overflow-hidden border border-white/10 shadow-lg relative group">
+                 <img 
+                  src="/assets/category-new-standard.png" 
+                  alt="The New Standard" 
+                  className="w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity duration-700"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">The New Standard</span>
+                </div>
+              </div>
             </div>
           </div>
           

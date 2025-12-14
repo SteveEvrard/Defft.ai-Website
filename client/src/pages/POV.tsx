@@ -161,9 +161,16 @@ export default function POV() {
         </section>
 
         {/* Vision Statement */}
-        <section className="mb-24 relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-white/10 p-12 md:p-24 text-center">
-          <div className="absolute inset-0 bg-[url('/assets/pov-human-vision.png')] opacity-30 bg-cover mix-blend-overlay" />
-          <div className="relative z-10 max-w-4xl mx-auto">
+        <section className="mb-24 relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-white/10 p-0 text-center group">
+          <div className="absolute inset-0">
+            <img 
+              src="/assets/pov-future-vision.png" 
+              alt="Future Vision" 
+              className="w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto p-12 md:p-24">
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">The Vision</h2>
             <p className="text-3xl md:text-5xl font-heading font-bold text-white leading-tight mb-12">
               "A world where institutional knowledge never evaporates, where the machine handles the complexity, and humans are free to build relationships."
