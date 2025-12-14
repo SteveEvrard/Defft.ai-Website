@@ -123,6 +123,75 @@ export default function Team() {
           </div>
         </motion.div>
 
+        {/* Strategic Support Section */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="mb-40"
+        >
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Strategic Support</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Industry veterans and technical pioneers building the foundation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Mike Segovia */}
+            <motion.div variants={fadeIn} className="group">
+              <div className="relative rounded-2xl overflow-hidden aspect-square mb-6 border border-white/10">
+                <img 
+                  src="/assets/team-mike-segovia.png" 
+                  alt="Mike Segovia" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-1">Mike Segovia</h3>
+              <p className="text-primary font-medium uppercase tracking-wider text-sm mb-4">Sales & Business Development</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Western Regional Sales Manager at P3 Pacific Packaging Products. A veteran deal-maker specializing in sustainable packaging solutions and high-stakes account management.
+              </p>
+            </motion.div>
+
+            {/* Bob McCarthy */}
+            <motion.div variants={fadeIn} className="group">
+              <div className="relative rounded-2xl overflow-hidden aspect-square mb-6 border border-white/10">
+                <img 
+                  src="/assets/team-bob-mccarthy.png" 
+                  alt="Bob McCarthy" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-1">Bob McCarthy</h3>
+              <p className="text-primary font-medium uppercase tracking-wider text-sm mb-4">Technology & Strategy</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                MIT alum and CEO of Excorr Inc. A pioneer in real-time signal processing and AI/BI systems, bringing deep technical rigor to the platform's core intelligence.
+              </p>
+            </motion.div>
+
+            {/* Steve Evrard */}
+            <motion.div variants={fadeIn} className="group">
+              <div className="relative rounded-2xl overflow-hidden aspect-square mb-6 border border-white/10">
+                <img 
+                  src="/assets/team-steve-evrard.png" 
+                  alt="Steve Evrard" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-1">Steve Evrard</h3>
+              <p className="text-primary font-medium uppercase tracking-wider text-sm mb-4">Infrastructure & Development</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                VP of Business Development at VIVIFY Technology. An infrastructure architect focused on building scalable, tech-driven solutions for complex industrial problems.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* Origin Story Section */}
         <motion.div 
           initial="hidden"
