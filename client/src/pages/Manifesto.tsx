@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import DataOverlay from "@/components/DataOverlay";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -30,6 +31,7 @@ export default function Manifesto() {
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          <DataOverlay />
         </div>
         <div className="container relative z-10 px-4 text-center">
           <motion.div 
@@ -57,6 +59,46 @@ export default function Manifesto() {
           className="mb-20 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
         >
           <img src="/assets/manifesto-hero.png" alt="System of Recommendation Visualization" className="w-full h-auto" />
+        </motion.div>
+
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="mb-32 bg-white/5 border border-white/10 rounded-3xl overflow-hidden"
+        >
+          <div className="grid md:grid-cols-2">
+            <div className="relative h-[400px] md:h-auto">
+              <video 
+                src="/assets/manifesto-rep-interview.mp4" 
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/90 md:hidden" />
+            </div>
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Meet Sarah</h3>
+                  <p className="text-sm text-muted-foreground">Senior Account Executive</p>
+                </div>
+              </div>
+              <blockquote className="text-xl md:text-2xl font-medium text-gray-200 italic mb-6">
+                "Before Defft, I spent 4 hours a day just looking for answers. I felt like a clerk, not a consultant. Now? I walk into every meeting knowing exactly what they need before they ask. It's not just faster—it's empowering."
+              </blockquote>
+              <div className="flex gap-2">
+                <span className="px-3 py-1 rounded-full bg-destructive/20 text-destructive text-xs font-bold">The Pain: Guesswork Tax</span>
+                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold">The Gain: Trusted Advisor</span>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div 

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Milestone } from "lucide-react";
 import { Link } from "wouter";
+import DataOverlay from "@/components/DataOverlay";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -73,6 +74,7 @@ export default function Roadmap() {
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          <DataOverlay />
         </div>
         <div className="container relative z-10 px-4 text-center">
           <motion.div 

@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Lightbulb, Compass, Heart, Zap, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import DataOverlay from "@/components/DataOverlay";
 import { Button } from "@/components/ui/button";
 
 const fadeIn = {
@@ -30,6 +31,7 @@ export default function POV() {
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          <DataOverlay />
         </div>
         <div className="container relative z-10 px-4 text-center">
           <motion.div 
