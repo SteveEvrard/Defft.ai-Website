@@ -158,10 +158,10 @@ export default function Roadmap() {
           variants={fadeIn}
           className="mt-32 text-center"
         >
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to start the journey?</h2>
-          <Link href="/">
+          <h2 className="text-3xl font-bold text-white mb-8">Meet the Team</h2>
+          <Link href="/team">
             <Button size="lg" className="text-xl px-10 py-8 bg-primary text-white hover:bg-primary/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
-              Back to Home <ArrowRight className="ml-2 w-6 h-6" />
+              Meet the Team <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
           </Link>
         </motion.div>

@@ -159,10 +159,10 @@ export default function Team() {
           variants={fadeIn}
           className="mt-40 text-center"
         >
-          <h2 className="text-4xl font-bold text-white mb-10">Join the Revolution</h2>
-          <Link href="/manifesto">
+          <h2 className="text-4xl font-bold text-white mb-10">The Strategy</h2>
+          <Link href="/strategy">
             <Button size="lg" className="text-xl px-12 py-8 bg-primary text-white hover:bg-primary/90 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(255,85,0,0.5)] hover:shadow-[0_0_60px_-10px_rgba(255,85,0,0.7)] hover:scale-105 transition-all duration-300">
-              Read the Manifesto <ArrowRight className="ml-3 w-6 h-6" />
+              See the Strategy <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
           </Link>
         </motion.div>
