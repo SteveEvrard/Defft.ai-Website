@@ -123,72 +123,126 @@ export default function Team() {
           </div>
         </motion.div>
 
-        {/* Strategic Support Section */}
+        {/* Mike Segovia Section */}
         <motion.div 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={staggerContainer}
-          className="mb-40"
+          variants={fadeIn}
+          className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-40"
         >
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Strategic Support</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Industry veterans and technical pioneers building the foundation.
-            </p>
+          <div className="w-full lg:w-1/2">
+            <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group aspect-[4/5]">
+              <img src="/assets/team-mike-cinematic.png" alt="Mike Segovia - The Closer" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              <div className="absolute bottom-10 left-10">
+                <h2 className="text-4xl font-bold text-white mb-2">Mike Segovia</h2>
+                <p className="text-primary font-bold uppercase tracking-widest text-sm">The Closer</p>
+              </div>
+            </div>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Mike Segovia */}
-            <motion.div variants={fadeIn} className="group">
-              <div className="relative rounded-2xl overflow-hidden aspect-square mb-6 border border-white/10">
-                <img 
-                  src="/assets/team-mike-segovia.png" 
-                  alt="Mike Segovia" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-1">Mike Segovia</h3>
-              <p className="text-primary font-medium uppercase tracking-wider text-sm mb-4">Sales & Business Development</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Western Regional Sales Manager at P3 Pacific Packaging Products. A veteran deal-maker specializing in sustainable packaging solutions and high-stakes account management.
+          <div className="w-full lg:w-1/2 space-y-8">
+            <h3 className="text-5xl font-bold text-white leading-tight">The Deal Maker</h3>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-light">
+              <p>
+                Mike isn't just a sales manager; he's a force of nature in the packaging world. Currently the Western Regional Sales Manager at P3 Pacific Packaging Products, Mike has spent decades mastering the art of the high-stakes deal.
               </p>
-            </motion.div>
-
-            {/* Bob McCarthy */}
-            <motion.div variants={fadeIn} className="group">
-              <div className="relative rounded-2xl overflow-hidden aspect-square mb-6 border border-white/10">
-                <img 
-                  src="/assets/team-bob-mccarthy.png" 
-                  alt="Bob McCarthy" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-1">Bob McCarthy</h3>
-              <p className="text-primary font-medium uppercase tracking-wider text-sm mb-4">Technology & Strategy</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                MIT alum and CEO of Excorr Inc. A pioneer in real-time signal processing and AI/BI systems, bringing deep technical rigor to the platform's core intelligence.
+              <p>
+                He understands that in this industry, relationships are currency, but data is the vault. He joined Defft.ai because he saw the potential to arm every rep with the same "unfair advantage" he's spent a career cultivating manually.
               </p>
-            </motion.div>
-
-            {/* Steve Evrard */}
-            <motion.div variants={fadeIn} className="group">
-              <div className="relative rounded-2xl overflow-hidden aspect-square mb-6 border border-white/10">
-                <img 
-                  src="/assets/team-steve-evrard.png" 
-                  alt="Steve Evrard" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+            </div>
+            <div className="flex flex-wrap gap-4 pt-6">
+              <div className="flex items-center gap-3 text-sm text-white bg-white/5 border border-white/10 px-5 py-3 rounded-full hover:bg-white/10 transition-colors">
+                <Award className="w-4 h-4 text-primary" />
+                <span>Sales Veteran</span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-1">Steve Evrard</h3>
-              <p className="text-primary font-medium uppercase tracking-wider text-sm mb-4">Infrastructure & Development</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                VP of Business Development at VIVIFY Technology. An infrastructure architect focused on building scalable, tech-driven solutions for complex industrial problems.
+              <div className="flex items-center gap-3 text-sm text-white bg-white/5 border border-white/10 px-5 py-3 rounded-full hover:bg-white/10 transition-colors">
+                <Lightbulb className="w-4 h-4 text-primary" />
+                <span>Strategic Growth</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Bob McCarthy Section */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="flex flex-col lg:flex-row-reverse gap-16 lg:gap-24 items-center mb-40"
+        >
+          <div className="w-full lg:w-1/2">
+            <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group aspect-[4/5]">
+              <img src="/assets/team-bob-cinematic.png" alt="Bob McCarthy - The Visionary" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              <div className="absolute bottom-10 left-10">
+                <h2 className="text-4xl font-bold text-white mb-2">Bob McCarthy</h2>
+                <p className="text-accent font-bold uppercase tracking-widest text-sm">The Visionary</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 space-y-8">
+            <h3 className="text-5xl font-bold text-white leading-tight">The Tracking Pioneer</h3>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-light">
+              <p>
+                Bob McCarthy is an MIT alum and the CEO of Excorr Inc., but his legacy goes deeper. Alongside Eric Spitz, <strong className="text-white font-medium">Bob co-founded Trakus</strong>, the sports technology company that invented the digital tracking systems used in the NHL and NFL today.
               </p>
-            </motion.div>
+              <p>
+                They didn't just watch the game; they digitized it. Now, Bob brings that same real-time, high-fidelity tracking logic to the supply chain. If he could track a hockey puck at 100mph, he can certainly track a pallet of corrugated boxes.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 pt-6">
+              <div className="flex items-center gap-3 text-sm text-white bg-white/5 border border-white/10 px-5 py-3 rounded-full hover:bg-white/10 transition-colors">
+                <BookOpen className="w-4 h-4 text-accent" />
+                <span>MIT Alum</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-white bg-white/5 border border-white/10 px-5 py-3 rounded-full hover:bg-white/10 transition-colors">
+                <Award className="w-4 h-4 text-accent" />
+                <span>Trakus Founder</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Steve Evrard Section */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-40"
+        >
+          <div className="w-full lg:w-1/2">
+            <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group aspect-[4/5]">
+              <img src="/assets/team-steve-cinematic.png" alt="Steve Evrard - The Builder" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              <div className="absolute bottom-10 left-10">
+                <h2 className="text-4xl font-bold text-white mb-2">Steve Evrard</h2>
+                <p className="text-primary font-bold uppercase tracking-widest text-sm">The Builder</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 space-y-8">
+            <h3 className="text-5xl font-bold text-white leading-tight">The Infrastructure Architect</h3>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-light">
+              <p>
+                Steve is the VP of Business Development at VIVIFY Technology, but his role at Defft.ai is far more foundational. He is the builder who turns visionary concepts into concrete reality.
+              </p>
+              <p>
+                With a career spent architecting scalable solutions for complex industrial problems, Steve ensures that the "System of Recommendation" isn't just a theory—it's a robust, enterprise-grade platform ready for global deployment.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 pt-6">
+              <div className="flex items-center gap-3 text-sm text-white bg-white/5 border border-white/10 px-5 py-3 rounded-full hover:bg-white/10 transition-colors">
+                <Lightbulb className="w-4 h-4 text-primary" />
+                <span>Infrastructure Expert</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-white bg-white/5 border border-white/10 px-5 py-3 rounded-full hover:bg-white/10 transition-colors">
+                <Award className="w-4 h-4 text-primary" />
+                <span>Scalability Architect</span>
+              </div>
+            </div>
           </div>
         </motion.div>
 
