@@ -39,58 +39,127 @@ export default function Engine() {
           </motion.p>
         </motion.div>
 
-        {/* Origin Story: Knowledge Graph */}
+        {/* The 100 Year Old Brain */}
         <section className="mb-32">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <motion.h2 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="text-3xl md:text-4xl font-heading font-bold mb-6"
+            >
+              The <span className="text-gradient">100-Year-Old Brain</span>
+            </motion.h2>
+            <motion.p 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="text-lg text-muted-foreground"
+            >
+              The System of Recommendation doesn't just give you data. It gives every new rep the wisdom of a 75-year veteran. Instantly.
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Maya: The New Rep */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="order-2 md:order-1"
+              className="relative group rounded-2xl overflow-hidden border border-white/10 bg-background/50"
             >
-              <div className="relative aspect-square rounded-full border border-white/10 flex items-center justify-center bg-white/5 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/assets/engine-human-brain.png')] opacity-50 bg-cover" />
-                <div className="relative z-10 text-center p-8 bg-background/80 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl">
-                  <Network className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">The Brain of Packaging™</h3>
-                  <p className="text-sm text-muted-foreground">Compounding Intelligence</p>
+              <div className="absolute inset-0">
+                <img 
+                  src="/assets/engine-maya.png" 
+                  alt="Maya - The New Rep" 
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+              </div>
+              <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                <h3 className="text-2xl font-bold text-white mb-2">Maya</h3>
+                <p className="text-primary font-medium mb-4">The New Rep (18 Months Exp)</p>
+                <div className="space-y-3 bg-black/40 backdrop-blur-md p-6 rounded-xl border border-white/5">
+                  <div className="flex items-start gap-3">
+                    <Database className="w-5 h-5 text-muted-foreground shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-medium">Has Product Knowledge</p>
+                      <p className="text-sm text-muted-foreground">Knows specs, pricing, and features cold.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Target className="w-5 h-5 text-muted-foreground shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-medium">Has Energy</p>
+                      <p className="text-sm text-muted-foreground">Hustles, makes calls, logs activity.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-destructive/20 flex items-center justify-center text-xs text-destructive font-bold shrink-0">!</div>
+                    <div>
+                      <p className="text-white font-medium">Missing Context</p>
+                      <p className="text-sm text-muted-foreground">"Send me some info."</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
-            
+
+            {/* Walt: The Veteran */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={staggerContainer}
-              className="order-1 md:order-2"
+              variants={fadeIn}
+              className="relative group rounded-2xl overflow-hidden border border-white/10 bg-background/50"
             >
-              <motion.h2 variants={fadeIn} className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                Origin: The Knowledge Graph
-              </motion.h2>
-              <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-6">
-                A system cannot give better recommendations unless it understands packaging at a deeper level than any human.
-                So Defft.ai built the industry’s first <strong>Packaging Knowledge Graph</strong>.
-              </motion.p>
-              <motion.ul variants={fadeIn} className="grid grid-cols-2 gap-4 mb-8">
-                {[
-                  "All packaging materials", "Machine constraints", "SKU & spec relationships", 
-                  "Vendor realities", "Lead-time modeling", "Sustainability scores",
-                  "Cartonization logic", "Engineering tolerances"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    {item}
-                  </li>
-                ))}
-              </motion.ul>
-              <motion.div variants={fadeIn} className="p-4 bg-primary/10 border border-primary/20 rounded-lg">
-                <p className="text-primary font-medium italic">
-                  "The more Defft.ai is used, the more irreplicable it becomes. That’s the moat."
-                </p>
-              </motion.div>
+              <div className="absolute inset-0">
+                <img 
+                  src="/assets/engine-walt.png" 
+                  alt="Walt - The Veteran" 
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+              </div>
+              <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                <h3 className="text-2xl font-bold text-white mb-2">Walt</h3>
+                <p className="text-primary font-medium mb-4">The Veteran (45 Years Exp)</p>
+                <div className="space-y-3 bg-black/40 backdrop-blur-md p-6 rounded-xl border border-white/5">
+                  <div className="flex items-start gap-3">
+                    <Network className="w-5 h-5 text-accent shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-medium">Has Pattern Recognition</p>
+                      <p className="text-sm text-muted-foreground">"I've seen this exact problem before."</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Box className="w-5 h-5 text-accent shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-medium">Has Deep Memory</p>
+                      <p className="text-sm text-muted-foreground">Remembers lead times, vendor quirks, and history.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center text-xs text-accent font-bold shrink-0">✓</div>
+                    <div>
+                      <p className="text-white font-medium">Closes the Deal</p>
+                      <p className="text-sm text-muted-foreground">"Let's run the samples."</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
+          </div>
+
+          <div className="mt-12 p-8 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl border border-white/10 text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('/assets/grid-pattern.svg')] opacity-10" />
+            <h3 className="text-2xl font-bold text-white mb-4 relative z-10">The Defft.ai Promise</h3>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto relative z-10">
+              We digitized Walt's brain. The System of Recommendation gives <span className="text-white font-bold">Maya</span> the pattern recognition of <span className="text-white font-bold">Walt</span>.
+            </p>
           </div>
         </section>
 
