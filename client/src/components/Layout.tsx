@@ -23,19 +23,28 @@ export default function Layout({ children }: LayoutProps) {
 
   // Scroll to top on route change
   useEffect(() => {
+    const hash = window.location.hash?.replace("#", "");
+    if (hash) {
+      // Let layout/content render before scrolling
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        else window.scrollTo(0, 0);
+      });
+      return;
+    }
+
     window.scrollTo(0, 0);
   }, [location]);
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "The Philosophy", href: "/philosophy" },
-    { name: "The Engine", href: "/engine" },
-    { name: "Manifesto", href: "/manifesto" },
+    { name: "Philosophy", href: "/philosophy" },
+    { name: "Engine", href: "/engine" },
     { name: "Category", href: "/category" },
     { name: "Roadmap", href: "/roadmap" },
     { name: "Team", href: "/team" },
-    { name: "The Strategy", href: "/strategy" },
-    { name: "The POV", href: "/pov" },
+    { name: "Strategy", href: "/strategy" },
   ];
 
   return (
@@ -53,19 +62,19 @@ export default function Layout({ children }: LayoutProps) {
           scrolled ? "bg-background/80 backdrop-blur-md border-white/10 py-4" : "bg-transparent py-6"
         )}
       >
-        <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
+        <div className="container mx-auto flex items-center gap-6 px-6 md:px-12">
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer group">
+            <div className="flex items-center gap-3 cursor-pointer group shrink-0">
               <img 
-                src="/assets/logo.png" 
+                src="/assets/logo-orange.png" 
                 alt="Defft.ai" 
-                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-9 md:h-10 lg:h-11 w-auto max-w-[180px] object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden xl:flex flex-1 items-center justify-center gap-10 min-w-0">
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
                 <div
@@ -78,6 +87,10 @@ export default function Layout({ children }: LayoutProps) {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Desktop CTA */}
+          <div className="hidden xl:flex shrink-0">
             <Button 
               variant="outline" 
               className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -89,7 +102,7 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground"
+            className="xl:hidden ml-auto text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
@@ -98,7 +111,7 @@ export default function Layout({ children }: LayoutProps) {
 
         {/* Mobile Nav */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/10 p-6 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
+          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/10 p-6 xl:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
                 <div
@@ -126,7 +139,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-2">
-              <img src="/assets/logo.png" alt="Defft.ai" className="h-8 w-auto opacity-80" />
+              <img src="/assets/logo-orange.png" alt="Defft.ai" className="h-8 w-auto opacity-80" />
               <span className="text-muted-foreground text-sm">© 2025 Defft.ai</span>
             </div>
             <div className="flex gap-6 text-sm text-muted-foreground">

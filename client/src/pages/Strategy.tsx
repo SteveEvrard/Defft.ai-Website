@@ -178,14 +178,14 @@ export default function Strategy() {
           <div className="text-center max-w-4xl mx-auto">
             <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Next Chapter</p>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-8">
-              The <span className="text-gradient">POV</span>
+              Category <span className="text-muted-foreground">+</span> <span className="text-gradient">POV</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12">
-              The culmination: Our Mantra, Mission, Core Values, and Vision.
+              Removing guesswork with category clarity and an intelligence-first point of view.
             </p>
-            <Link href="/pov">
+            <Link href="/category#pov">
               <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
-                Read the Culmination <ArrowRight className="ml-2 w-6 h-6" />
+                Continue Reading <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
             </Link>
           </div>

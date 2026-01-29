@@ -271,7 +271,7 @@ export default function Engine() {
             <p className="text-xl text-muted-foreground mb-12">
               A declaration of war on the "Guesswork Tax."
             </p>
-            <Link href="/manifesto">
+            <Link href="/philosophy#manifesto">
               <Button size="lg" className="text-xl px-10 py-8 bg-white text-background hover:bg-white/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
                 Continue Reading <ArrowRight className="ml-2 w-6 h-6" />
               </Button>

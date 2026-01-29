@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Check } from "lucide-react";
+import { Lightbulb, Compass, Heart, Zap, Users } from "lucide-react";
 import { Link } from "wouter";
 import DataOverlay from "@/components/DataOverlay";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -210,6 +211,156 @@ export default function Category() {
             </Link>
           </div>
         </motion.div>
+
+        {/* POV (Combined) */}
+        <section id="pov" className="mt-24 scroll-mt-32">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">The Culmination</p>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
+              The <span className="text-gradient">POV</span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              What’s true in life should be true in distribution: move from opinion-based to intelligence-based.
+            </p>
+          </div>
+
+          {/* Point of View Statement */}
+          <section className="mb-24 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 blur-3xl -z-10" />
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="bg-card/30 backdrop-blur-md border border-white/10 rounded-3xl p-12 md:p-20 text-center max-w-5xl mx-auto shadow-2xl"
+            >
+              <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-8">The Point of View</h3>
+              <p className="text-3xl md:text-5xl font-heading font-bold text-white leading-tight mb-8">
+                &quot;The future of distribution isn&apos;t about better logistics. It&apos;s about{" "}
+                <span className="text-gradient">better decisions</span>.&quot;
+              </p>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                In a world drowning in data, the ultimate advantage is turning noise into a clear, actionable
+                recommendation. We are building the intelligence layer that makes every rep 10x more valuable.
+              </p>
+            </motion.div>
+          </section>
+
+          {/* Mantra & Mission */}
+          <section className="mb-24 grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-center text-center md:text-left"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6 mx-auto md:mx-0">
+                <Zap className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-4">The Mantra</h3>
+              <p className="text-3xl md:text-4xl font-heading font-bold text-white leading-tight">
+                &quot;Recommendation, <br />
+                Not Guesswork.&quot;
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              transition={{ delay: 0.2 }}
+              className="bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-center text-center md:text-left"
+            >
+              <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6 mx-auto md:mx-0">
+                <Compass className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-4">The Mission</h3>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                To transform packaging distribution from an opinion-based industry to an{" "}
+                <strong className="text-white">intelligence-based</strong> one, equipping every rep with machine-backed
+                reasoning.
+              </p>
+            </motion.div>
+          </section>
+
+          {/* Core Values */}
+          <section className="mb-24">
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-4xl font-heading font-bold mb-6">Core Values</h3>
+              <p className="text-lg text-muted-foreground">
+                The principles that guide the machine — and the humans building it.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: Lightbulb,
+                  title: "Intelligence First",
+                  desc: "We don’t guess. We build from the data up. Every decision is backed by the Knowledge Graph."
+                },
+                {
+                  icon: Heart,
+                  title: "Radical Empathy",
+                  desc: "We design for the human on the other side. We restore humanity stripped away by 'SKUs' and 'Targets'."
+                },
+                {
+                  icon: Zap,
+                  title: "Compounding Value",
+                  desc: "Static systems die. Ours learns. Every interaction makes the system smarter for everyone."
+                },
+                {
+                  icon: Users,
+                  title: "Symbiosis",
+                  desc: "Humans + Machines > Humans alone. We don’t replace reps; we give them superpowers."
+                }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-card/50 border border-white/5 p-8 rounded-2xl hover:bg-white/5 transition-colors group"
+                >
+                  <item.icon className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors mb-6" />
+                  <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </section>
+
+          {/* Vision Statement */}
+          <section className="mb-24 relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-white/10 p-0 text-center group">
+            <div className="absolute inset-0">
+              <img
+                src="/assets/pov-future-vision.png"
+                alt="Future Vision"
+                className="w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+            </div>
+            <div className="relative z-10 max-w-4xl mx-auto p-12 md:p-24">
+              <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">The Vision</h3>
+              <p className="text-3xl md:text-5xl font-heading font-bold text-white leading-tight mb-12">
+                &quot;A world where institutional knowledge never evaporates, where the machine handles the complexity,
+                and humans are free to build relationships.&quot;
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button
+                  size="lg"
+                  className="text-lg px-10 py-8 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_var(--primary)] rounded-full"
+                  onClick={() => (window.location.href = "mailto:hello@defft.ai")}
+                >
+                  Join the Revolution
+                </Button>
+              </div>
+            </div>
+          </section>
+        </section>
       </div>
     </Layout>
   );

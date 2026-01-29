@@ -122,7 +122,7 @@ export default function Flywheel({ className = "" }: { className?: string }) {
       {/* Center Logo Container */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[38%] h-[38%] bg-white rounded-full shadow-[0_0_60px_rgba(0,0,0,0.6)] flex items-center justify-center p-6 z-10 border-4 border-black/10">
-           <img src="/assets/logo.png" alt="Defft Logo" className="w-full h-auto object-contain" />
+           <img src="/assets/logo-orange.png" alt="Defft Logo" className="w-full h-auto object-contain" />
         </div>
       </div>
     </div>

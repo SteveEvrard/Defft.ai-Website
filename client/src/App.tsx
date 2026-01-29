@@ -1,20 +1,27 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Philosophy from "./pages/Philosophy";
 import Engine from "@/pages/Engine";
-import Manifesto from "@/pages/Manifesto";
 import Category from "@/pages/Category";
 import Roadmap from "@/pages/Roadmap";
 import Team from "@/pages/Team";
 import TampaConfidential from "@/pages/TampaConfidential";
 import OrlandoConfidential from "@/pages/OrlandoConfidential";
 import Strategy from "./pages/Strategy";
-import POV from "./pages/POV";
+
+function RedirectTo({ to }: { to: string }) {
+  const [, setLocation] = useLocation();
+  useEffect(() => {
+    setLocation(to);
+  }, [setLocation, to]);
+  return null;
+}
 
 function Router() {
   return (
@@ -22,14 +29,18 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/philosophy" component={Philosophy} />
       <Route path="/engine" component={Engine} />
-      <Route path="/manifesto" component={Manifesto} />
       <Route path="/category" component={Category} />
       <Route path="/roadmap" component={Roadmap} />
       <Route path="/team" component={Team} />
       <Route path="/tampa" component={TampaConfidential} />
       <Route path="/orlando" component={OrlandoConfidential} />
       <Route path="/strategy" component={Strategy} />
-      <Route path="/pov" component={POV} />
+      <Route path="/manifesto">
+        <RedirectTo to="/philosophy#manifesto" />
+      </Route>
+      <Route path="/pov">
+        <RedirectTo to="/category#pov" />
+      </Route>
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

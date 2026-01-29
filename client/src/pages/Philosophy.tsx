@@ -51,6 +51,136 @@ export default function Philosophy() {
       </div>
       <div className="container mx-auto px-4">
 
+        {/* Manifesto (Seed) */}
+        <section id="manifesto" className="mb-32 scroll-mt-32">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="max-w-5xl mx-auto"
+          >
+            <motion.div variants={fadeIn} className="text-center mb-10">
+              <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">The Seed</p>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">
+                The <span className="text-gradient">Manifesto</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mt-4">
+                A declaration of war on the &quot;Guesswork Tax&quot; — and the origin of our philosophy.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn}
+              className="mb-12 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+            >
+              <img
+                src="/assets/manifesto-hero.png"
+                alt="System of Recommendation Visualization"
+                className="w-full h-auto"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn}
+              className="mb-12 bg-white/5 border border-white/10 rounded-3xl overflow-hidden"
+            >
+              <div className="grid md:grid-cols-2">
+                <div className="relative h-[400px] md:h-auto">
+                  <video
+                    src="/assets/manifesto-rep-interview.mp4"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/90 md:hidden" />
+                </div>
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Meet Sarah</h3>
+                      <p className="text-sm text-muted-foreground">Senior Account Executive</p>
+                    </div>
+                  </div>
+                  <blockquote className="text-xl md:text-2xl font-medium text-gray-200 italic mb-6">
+                    &quot;Before Defft, I spent 4 hours a day just looking for answers. I felt like a clerk, not a
+                    consultant. Now? I walk into every meeting knowing exactly what they need before they ask. It&apos;s
+                    not just faster—it&apos;s empowering.&quot;
+                  </blockquote>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="px-3 py-1 rounded-full bg-destructive/20 text-destructive text-xs font-bold">
+                      The Pain: Guesswork Tax
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold">
+                      The Gain: Trusted Advisor
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn}
+              className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground"
+            >
+              <p>
+                We believe packaging distribution is broken. Not because the people are broken, but because the system
+                they are forced to use is broken.
+              </p>
+              <p>
+                We believe the future of this industry lies not in warehouses, trucks, or catalogs, but in{" "}
+                <strong className="text-white">intelligence</strong>.
+              </p>
+              <p>
+                We believe the scoreboard must evolve. We reject the idea that &quot;more calls&quot; equals &quot;more
+                sales.&quot; We reject the <strong className="text-destructive">Guesswork Tax</strong> that drains
+                millions from the bottom line.
+              </p>
+              <div className="p-8 bg-white/5 border-l-4 border-primary rounded-r-xl">
+                <h3 className="text-2xl font-bold text-white mb-3">We commit to a new truth:</h3>
+                <p className="text-3xl font-heading font-bold text-gradient">The System of Recommendation.</p>
+              </div>
+              <p>
+                We refuse to settle for software that just records what happened. We demand software that tells you{" "}
+                <strong className="text-white">what to do next</strong>.
+              </p>
+              <p>
+                We believe that when you combine human creativity with machine intelligence, you don&apos;t just get
+                efficiency. You get <strong className="text-accent">superpowers</strong>.
+              </p>
+              <p>This is our call to arms. To stop guessing. To stop searching. To start knowing.</p>
+            </motion.div>
+
+            <motion.div variants={fadeIn} className="pt-12 text-center">
+              <Link href="/category">
+                <Button
+                  size="lg"
+                  className="text-xl px-10 py-8 bg-primary text-white hover:bg-primary/90 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform"
+                >
+                  Understand the Category <ArrowRight className="ml-2 w-6 h-6" />
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </section>
+
         {/* The 4Es Framework */}
         <section className="mb-32">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
