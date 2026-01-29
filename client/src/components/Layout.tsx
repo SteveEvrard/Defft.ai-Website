@@ -11,7 +11,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,11 +92,11 @@ export default function Layout({ children }: LayoutProps) {
           {/* Desktop CTA */}
           <div className="hidden xl:flex shrink-0">
             <Button 
-              variant="outline" 
-              className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              onClick={() => window.open('/Defft_Category_Design_Report.pdf', '_blank')}
+              size="lg"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_var(--primary)] transition-all duration-300 hover:scale-105"
+              onClick={() => setLocation("/roi")}
             >
-              Read the Report
+              ROI Calculator
             </Button>
           </div>
 
@@ -125,6 +125,18 @@ export default function Layout({ children }: LayoutProps) {
                 </div>
               </Link>
             ))}
+            <div className="pt-4 border-t border-white/10">
+              <Button
+                size="lg"
+                className="w-full text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_var(--primary)] transition-all duration-300 hover:scale-[1.02]"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setLocation("/roi");
+                }}
+              >
+                ROI Calculator
+              </Button>
+            </div>
           </div>
         )}
       </nav>

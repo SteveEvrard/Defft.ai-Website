@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Brain, Users, Layers } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import DataOverlay from "@/components/DataOverlay";
 
 // Animation variants
@@ -23,6 +23,8 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const [, setLocation] = useLocation();
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -65,17 +67,18 @@ export default function Home() {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_var(--primary)] transition-all duration-300 hover:scale-105"
-                onClick={() => document.getElementById('category')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => setLocation("/roi")}
               >
-                Explore the System
+                Run ROI Calculator
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="text-lg px-8 py-6 border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
-                onClick={() => window.open('/assets/Defft_Category_Design_Report.pdf', '_blank')}
+                onClick={() => document.getElementById('category')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Download PDF
+                Explore the System
               </Button>
             </motion.div>
           </motion.div>

@@ -14,6 +14,7 @@ import Team from "@/pages/Team";
 import TampaConfidential from "@/pages/TampaConfidential";
 import OrlandoConfidential from "@/pages/OrlandoConfidential";
 import Strategy from "./pages/Strategy";
+import RoiCalculator from "@/pages/RoiCalculator";
 
 function RedirectTo({ to }: { to: string }) {
   const [, setLocation] = useLocation();
@@ -35,11 +36,15 @@ function Router() {
       <Route path="/tampa" component={TampaConfidential} />
       <Route path="/orlando" component={OrlandoConfidential} />
       <Route path="/strategy" component={Strategy} />
+      <Route path="/roi" component={RoiCalculator} />
       <Route path="/manifesto">
         <RedirectTo to="/philosophy#manifesto" />
       </Route>
       <Route path="/pov">
         <RedirectTo to="/category#pov" />
+      </Route>
+      <Route path="/calculator">
+        <RedirectTo to="/roi" />
       </Route>
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}

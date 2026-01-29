@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci --legacy-peer-deps
+    build:
+      commands:
+        # Vite root is ./client (see vite.config.ts)
+        # Vite output is dist/public (see vite.config.ts)
+        - npm run build
+  artifacts:
+    baseDirectory: dist/public
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
